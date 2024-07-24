@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Pattern</title>
+    </head>
+    <script>
+        function Pattern(){
+            let a=parseInt(document.getElementById("n").value);
+            pattern="";
+            for (let i=1;i<=a;i++){
+                for (let j=1;j<=i;j++){
+                    pattern+="* ";
+                }
+                pattern += "<br>"
+            }
+            document.getElementById("result").innerHTML=(pattern);
+    }
+    </script>
+    <body>
+        Enter a  pattern Number: <input type="text" id="n"/>
+        <br><br>
+        <button onclick="Pattern()">Click here</button>
+        <br><br>
+        <div id="result">
+        </div>
+    </body>
+</html>
