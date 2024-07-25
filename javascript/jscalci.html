@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Calculator</title>
+    <style>
+        table {
+            background-color: rgb(7, 7, 7);
+            border: 1px solid rgba(129, 72, 72, 0.589);
+            margin-left: auto;
+            margin-right: auto;
+        }
+       
+        input[type="button"] {
+            width: 100%;
+            padding: 20px ;
+            background-color: rgb(44, 193, 206);
+            color: rgb(230, 240, 244);
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+        }
+       
+        input[type="text"] {
+            padding: 20px 30px;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            border: 2px solid wheat;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="calcu">
+        <tr>
+            <td colspan="6">
+                <input type="text" id="result">
+            </td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="C" onclick="clearelement()"></td>
+            <td><input type="button" value="%" onclick="element('%')"></td>
+            <td><input type="button" value="<=" onclick="clearlastvalue()"></td>
+            <td><input type="button" value="/"  onclick="element('/')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="element('7')"></td>
+            <td><input type="button" value="8" onclick="element('8')"></td>
+            <td><input type="button" value="9" onclick="element('9')"></td>
+            <td><input type="button" value="*" onclick="element('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="element('4')"></td>
+            <td><input type="button" value="5" onclick="element('5')"></td>
+            <td><input type="button" value="6" onclick="element('6')"></td>
+            <td><input type="button" value="-" onclick="element('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="element('1')"></td>
+            <td><input type="button" value="2" onclick="element('2')"></td>
+            <td><input type="button" value="3" onclick="element('3')"></td>
+            <td><input type="button" value="+" onclick="element('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="00" onclick="element('00')"></td>
+            <td><input type="button" value="0" onclick="element('0')"></td>
+            <td><input type="button" value="." onclick="element('.')"></td>
+            <td><input type="button" value="=" onclick="solution()"></td>
+        </tr>
+     
+    </table>
+    <script>
+        function clearelement(){
+            document.getElementById("result").value='';
+        }
+        function element(value){
+            document.getElementById("result").value += value;
+        }
+        function clearlastvalue(){
+            let Currentvalue = document.getElementById("result").value;
+            document.getElementById("result").value=Currentvalue.slice(0,-1);
+        }
+        function solution(){
+            let resultValue = document.getElementById("result");
+            let result=eval(resultValue.value);
+            resultValue.value=result;
+        }
+    </script>
+</body>
+
+</html>
