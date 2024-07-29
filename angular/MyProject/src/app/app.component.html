@@ -1,0 +1,29 @@
+<h1>Welcome</h1>
+<b>
+  My name:{{name}}
+  <br>
+  My age:{{age}}
+  <br>
+  Email:<input type="text" value="{{email}}"/>
+  <br>
+  Addition:{{getAddition(20,40)}}
+</b>
+<h1>property binding example</h1>
+<font [color]="txtColor">
+My name:<input type="text"[value]="name"/>
+<br>
+My age:<input type="text"[value]="age"/>
+<br>
+My Email:<input type="text"[value]="email"/>
+<br><br>
+My Addition:<input type="text"[value]="getAddition(20,40)"/>
+<br><br>
+<img [src] = "imgPath" width="200" height="150"/>
+</font>
+<h1>even binding example</h1>
+<br><br>
+<button (click)="changename()">change name</button>
+<br><br>
+<button (click)="changeage()">change age</button>
+<br><br>
+<button (click)="changeemail()">change email</button>
