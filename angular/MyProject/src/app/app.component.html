@@ -1,4 +1,4 @@
-<h1>Welcome</h1>
+<!--<h1>Welcome</h1>
 <b>
   My name:{{name}}
   <br>
@@ -27,3 +27,31 @@ My Addition:<input type="text"[value]="getAddition(20,40)"/>
 <button (click)="changeage()">change age</button>
 <br><br>
 <button (click)="changeemail()">change email</button>
+<br>
+<h1>Two Way Data Binding Example</h1>
+enter your first name<input type="text" [(ngModel)]="fname"/>
+<br>
+<b>welcome{{fname}}</b>
+<br>
+-->
+
+<h1>Angular Structural Directives</h1>
+<button (click)="changeFlag()">Show or Hide Div</button>
+<br>
+<div *ngIf="flag" [ngStyle] = "myStyle">
+   <ul>
+    <li *ngFor = "let vec of vehicles" (click)="setselectedItem(vec)">{{vec}}</li>
+   </ul>
+   <br>
+   <b [ngClass]="myClass">selected item:{{selectedVehicle}}</b>
+   <br>
+   <div [ngSwitch]="selectedVehicle">
+    <font color="red" *ngSwitchCase="'Bike'">Honda<br>Yamaha</font>
+    <font color="crimson" *ngSwitchCase="'Auto'">Shareauto<br>Normalauto</font>
+    <font color="green" *ngSwitchCase="'Car'">Mahindra<br>Swift</font>
+
+   </div>
+</div>
+<br>
+<button (click)="changeFlag()">Show or Hide</button>
+<br>

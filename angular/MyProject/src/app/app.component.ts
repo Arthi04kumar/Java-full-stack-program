@@ -5,32 +5,27 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  name:string;
-  age:number;
-  email:string;
-  txtColor:string;
-  imgPath:String;
+
+
+export class AppComponent 
+{
+  flag : boolean;
+  vehicles : string[];
+  selectedVehicle : string = "";
+  myStyle: {};
+  myClass : string;
 
   constructor(){
-    this.name="Aarthi"
-    this.age=20;
-    this.email="arthikumar2030@gmail.com";
-    this.txtColor="lavendar";
-    this.imgPath="./assets/angular.png";
+    this.flag=true;
+    this.vehicles = ["Bike","Car", "Auto"];
+    this.myStyle = {'width':'40%', 'border':'2px solid green'}
+    this.myClass ="MyClass";
+  }
+  changeFlag(){
+    this.flag = ! this.flag;
   }
 
-  getAddition(a:number,b:number){
-    let sum=a+b;
-    return sum;
-  }
-  changename(){
-    this.name="Kumar";
-  }
-  changeage(){
-    this.age=21;
-  }
-  changeemail(){
-    this.email="arthiarthi0404@gmail.com";
+  setselectedItem(vec : string){
+    this.selectedVehicle = vec;
   }
 }

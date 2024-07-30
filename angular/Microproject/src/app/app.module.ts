@@ -3,18 +3,16 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ChildComponent } from './child/child.component';
-import { FormsModule } from '@angular/forms';
+import { MicroprojectComponent } from './microproject/microproject.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponent
+    MicroprojectComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    AppRoutingModule
   ],
   providers: [
     provideClientHydration()
