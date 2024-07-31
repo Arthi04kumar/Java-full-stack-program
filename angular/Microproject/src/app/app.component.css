@@ -9,12 +9,13 @@
   h1, h2 {
     margin: 0;
     padding: 0.5em;
+    text-align: center;
   }
   
   .form {
     width:50%;
     margin: 5px;
-    padding: 5px;
+    padding-left: 50px;
     background-color:lavender;
     border-radius: 2px;
   }
@@ -22,6 +23,7 @@
   form label {
     display:block;
     margin: 5px 0;
+    
   }
   
   form input {
@@ -31,9 +33,14 @@
   }
 
   select{
-    background-color: rgba(70, 185, 234, 0.39);
+    background-color: white;
   }
 
+  form select{
+    width:52%;
+    padding:8px;
+    margin:10px 0;
+  }
   select:hover{
     background-color: rgba(225, 75, 140, 0.652);
   }
@@ -71,7 +78,7 @@
     width: 50%;
     height:100%;
     margin: 5px;
-    padding: 5px;
+    padding-left: 50px;
     background-color:azure;
     border-radius: 1px;
 }
