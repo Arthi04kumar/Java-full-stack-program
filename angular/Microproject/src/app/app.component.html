@@ -3,30 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Microproject</title>
+  <link rel="stylesheet" href="app.component.css">
+  <title>Movie Database Management</title>
 </head>
 <body>
-  <h1>Movie Data</h1>
-  <div class="container">
-    <form id="Data-form"></form>
-      <div class="form-group">
-        <lable for="Movie name">Movie name</lable>
-        <input type="text" id="category" id="Data-form" required>
-      </div>
-      <div class="form-group">
-        <label for="Released Year">Released Year</label>
-        <input type="number" id="Released Year" required>
-      </div>
-      <div class="cast">
-        <button class="dropdown-toggle" type="button" data-toggle="dropdown">Cast<span class="caret"></span>
+  <header>
+    <h1>Movie Database Management</h1>
+  </header>
+  
+  <div class="form">
+    <h2>Add a Movie</h2>
+    <form id="movieForm">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" required>
+      <br>
+      <label for="director">Director</label>
+      <input type="text" id="director" name="director" required>
+      <br>
+      <label for="year">Release Year</label>
+      <input type="number" id="year" name="year" required>
+      <br>
+      <label for="genre">Genre</label>
+      <select id="genre" class="form-control"  required>
+      <option value="Romance">Romance</option>
+      <option value="Thriller">Thriller</option>
+      <option value="Comedy">Comedy</option>
+      <option value="Drama">Drama</option>
+      <option value="Horror">Horror</option>
+      <option value="Science Fiction">Science Fiction</option>
+      <option value="Western">Western</option>
+      <option value="Action">Action</option>
+      <option value="Feel Good Films">Feel Good Films</option>
+    </select>
+      
+      <br><br>
+      <button type="submit">Insert</button>
+      <button type="submit">Delete</button>
+      <button type="submit">Update</button>
+      <button type="submit">Find</button>
+      <button type="submit">Find All</button>
+    </form>
+  </div>
+      
+  <section class="movie-list">
+    <h2>Movie List</h2>
+    <table id="movieTable">
+        <tr>
+          <th>Title</th>
+          <th>Director</th>
+          <th>Year</th>
+          <th>Genre</th>
+        </tr>
+    </table>
+  </section>
 
-        <ul class="dropdown menu">
-            <li><a href="#">Hero</a></li>
-            <li><a href="#">Heroine</a></li>
-            <li><a href="#">Supportive role</a></li>
-            <li><a href="#">Comedian</a></li>
-        </ul>
-      </button>
-    </div>
 </body>
 </html>

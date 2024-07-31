@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CalculatorService } from './calculator.service';
 
 @Component({
   selector: 'app-root',
@@ -9,23 +10,8 @@ import { Component } from '@angular/core';
 
 export class AppComponent 
 {
-  flag : boolean;
-  vehicles : string[];
-  selectedVehicle : string = "";
-  myStyle: {};
-  myClass : string;
-
-  constructor(){
-    this.flag=true;
-    this.vehicles = ["Bike","Car", "Auto"];
-    this.myStyle = {'width':'40%', 'border':'2px solid green'}
-    this.myClass ="MyClass";
-  }
-  changeFlag(){
-    this.flag = ! this.flag;
-  }
-
-  setselectedItem(vec : string){
-    this.selectedVehicle = vec;
+  sum:number;
+  constructor(private calc:CalculatorService){
+    this.sum=calc.getAddition(10,30);
   }
 }
