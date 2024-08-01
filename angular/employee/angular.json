@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Microproject": {
+    "employee": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/microproject",
+            "outputPath": "dist/employee",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -74,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Microproject:build:production"
+              "buildTarget": "employee:build:production"
             },
             "development": {
-              "buildTarget": "Microproject:build:development"
+              "buildTarget": "employee:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -109,6 +109,6 @@
     }
   },
   "cli": {
-    "analytics": "0c6f2dfb-356c-47bb-a75c-f4f8eca2f2a4"
+    "analytics": "24355a7e-bf73-4f94-9e8f-90e86c6c2e9c"
   }
 }

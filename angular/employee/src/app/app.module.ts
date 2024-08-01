@@ -3,19 +3,21 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MicroprojectComponent } from './microproject/microproject.component';
+import { FormsModule } from '@angular/forms';
+import { EmployeeService } from './employee.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MicroprojectComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    EmployeeService
   ],
   bootstrap: [AppComponent]
 })

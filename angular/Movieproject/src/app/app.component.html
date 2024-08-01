@@ -15,13 +15,41 @@
     <h2>Add a Movie</h2>
     <form id="movieForm">
       <label for="title">Title</label>
-      <input type="text" id="title" name="title" required>
-      <br>
+      <input type="text" id="title" class="form-group" name="title" #title="ngModel" ngModel required pattern="[a-zA-z][a-zA-Z]+">
+
+        <div *ngIf="title.touched">
+          <div *ngIf="title.errors?.['required']">
+            <font color='red'><b>Title required.</b></font>
+          </div>
+            <div *ngIf="title.errors?.['pattern']">
+              <font color="red"><b>Invalid title.</b></font>
+            </div>
+        </div>
+
+      <br> 
       <label for="director">Director</label>
-      <input type="text" id="director" name="director" required>
-      <br>
-      <label for="year">Release Year</label>
-      <input type="number" id="year" name="year" required>
+      <input type="text" id="director" name="director"#director="ngModel" ngModel required pattern="[a-zA-z][a-zA-Z]+">
+        
+      <div *ngIf="director.touched">
+        <div *ngIf="director.errors?.['required']">
+          <font color='red'><b>Director required.</b></font>
+        </div>
+          <div *ngIf="director.errors?.['pattern']">
+            <font color="red"><b>Invalid Director Name.</b></font>
+          </div>
+      </div>
+      <br> 
+      <label for="year">Year</label>
+      <input type="number" id="year" name="year"#year="ngModel" ngModel required pattern="[0-9]+">
+        
+      <div *ngIf="year.touched">
+        <div *ngIf="year.errors?.['required']">
+          <font color='red'><b>Year required.</b></font>
+        </div>
+          <div *ngIf="year.errors?.['pattern']">
+            <font color="red"><b>Invalid Year.</b></font>
+          </div>
+      </div>
       <br>
       <label for="genre">Genre</label>
       <select id="genre" class="form-control"  required>
@@ -38,12 +66,17 @@
       
       <br><br>
       <button type="submit">Insert</button>
+      &nbsp;&nbsp;
       <button type="submit">Delete</button>
+      &nbsp;&nbsp;
       <button type="submit">Update</button>
+      &nbsp;&nbsp;
       <button type="submit">Find</button>
+      &nbsp;&nbsp;
       <button type="submit">Find All</button>
     </form>
   </div>
+  <br><br>
       
   <section class="movie-list">
     <h2>Movie List</h2>

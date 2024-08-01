@@ -1,5 +1,5 @@
 {
-  "name": "microproject",
+  "name": "movieproject",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:Microproject": "node dist/microproject/server/server.mjs"
+    "serve:ssr:Movieproject": "node dist/movieproject/server/server.mjs"
   },
   "private": true,
   "dependencies": {
